@@ -121,6 +121,30 @@ header {
 }
 
 
+#back-to-top::before {
+    border-radius: 50%;
+}
+
+#back-to-top {
+    position: fixed;
+    top: 15px;
+    right: 50%;
+    border-radius: 50%;
+    border: 0;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 3;
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+.back-to-top  {
+    height: 25px;
+    width: 25px;
+    transition: transform 0.2s ease-out;
+
+}
 .btn {
     
     font-size: 15px;
@@ -142,30 +166,6 @@ header {
     
 }
 
-#back-to-top::before {
-    border-radius: 50%;
-}
-
-#back-to-top {
-    position: fixed;
-    top: 15px;
-    right: 50%;
-    border-radius: 50%;
-    border: 0;
-    cursor: pointer;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-}
-
-
-
-.back-to-top  {
-    height: 25px;
-    width: 25px;
-    transition: transform 0.2s ease-out;
-
-}
 
 
 .btn::before {
