@@ -476,7 +476,12 @@ header {
     
 }
 
+.itens > div:hover {
+    flex: 2.5;
 
+    
+
+}
 
 
 .logo-img {

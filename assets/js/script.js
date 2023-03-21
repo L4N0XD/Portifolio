@@ -6,55 +6,81 @@ const CardTitle = document.getElementsByClassName('card-title');
 
 
 function cardDisposition(screen){
-  if (screen == "mobile"){
-    var $div3 = $('.full-card-mobile-1');
-    var $div4 = $('.full-card-mobile-2');
-    var $div5 = $('.full-card-mobile-3');
-    var $div6 = $('.full-card-mobile-4');
-    var $div7 = $('.full-card-mobile-5');
+  if (screen == "mobile") {
+    for (var d = 3; d <= 7; d++) {
+      var div = $('.full-card-mobile-' + (d - 2));
+      window['$div' + d] = div;
+      console.log(div);
+    }
+    for (var p = 5; p <= 13; p++) {
+      var newProjDiv;
+      if (p % 2 === 1) {
+        if (p === 5) {
+          newProjDiv = $('<div class="projects carousel-item active"></div>');
+          window['$newDiv' + p] = newProjDiv;
+          console.log(newProjDiv);
+        } else {
+          newProjDiv = $('<div class="projects carousel-item"></div>');
+          window['$newDiv' + p] = newProjDiv;
+          console.log(newProjDiv);
+        }
+      }
+    }
+    for (var i = 6; i <= 14; i++) {
+      var newDivIten;
+      var num = Math.ceil((i - 4) / 2);
+      if (i % 2 === 0) {
+        newDivIten = $('<div class="itens" id="new-itens-' + num + '"></div>');  
+        window['$newDiv' + i] = newDivIten;
+        console.log(newDivIten);
+      }
+    }
+    $div3.wrapAll($newDiv6);
+    var $itens = $('#new-itens-1');
+    $itens.wrapAll($newDiv5);
+  
+    $div4.wrapAll($newDiv8);
+    var $itens2 = $('#new-itens-2');
+    $itens2.wrapAll($newDiv7);
+  
+    $div5.wrapAll($newDiv10);
+    var $itens3 = $('#new-itens-3');
+    $itens3.wrapAll($newDiv9);
+  
+    $div6.wrapAll($newDiv12);
+    var $itens4 = $('#new-itens-4');
+    $itens4.wrapAll($newDiv11);
+  
+    $div7.wrapAll($newDiv14);
+    var $itens5 = $('#new-itens-5');
+    $itens5.wrapAll($newDiv13);
 
-    var $newDiv5 = $('<div class="projects carousel-item active"></div>');
-    var $newDiv6 = $('<div class="itens" id="new-itens-1"></div>');
-    var $newDiv7 = $('<div class="projects carousel-item"></div>');
-    var $newDiv8 = $('<div class="itens" id="new-itens-2"></div>');
-    var $newDiv9 = $('<div class="projects carousel-item"></div>');
-    var $newDiv10 = $('<div class="itens" id="new-itens-3"></div>');
-    var $newDiv11 = $('<div class="projects carousel-item"></div>');
-    var $newDiv12 = $('<div class="itens" id="new-itens-4"></div>');
-    var $newDiv13 = $('<div class="projects carousel-item"></div>');
-    var $newDiv14 = $('<div class="itens" id="new-itens-5"></div>');
-    $div3.wrapAll($newDiv6)
-    var $itens = $('#new-itens-1')
-    $itens.wrapAll($newDiv5)
-
-    $div4.wrapAll($newDiv8)
-    var $itens2 = $('#new-itens-2')
-    $itens2.wrapAll($newDiv7)
-
-    $div5.wrapAll($newDiv10)
-    var $itens3 = $('#new-itens-3')
-    $itens3.wrapAll($newDiv9)
-
-    $div6.wrapAll($newDiv12)
-    var $itens4 = $('#new-itens-4')
-    $itens4.wrapAll($newDiv11)
-
-    $div7.wrapAll($newDiv14)
-    var $itens5 = $('#new-itens-5')
-    $itens5.wrapAll($newDiv13)
 } else if (screen == "web"){
   var elements = document.getElementsByClassName('controlRemove');
 
-  for (var i = 0; i < 3; i++) {
+  for (var e = 0; e < 3; e++) {
     elements[0].parentNode.removeChild(elements[0]);
-}
-    var $div1 = $('.full-card-web-1');
-    var $div2 = $('.full-card-web-2');
-    var $newDiv1 = $('<div class="projects carousel-item active"></div>');
-    var $newDiv2 = $('<div class="itens" id="new-itens-1"></div>');
-    var $newDiv3 = $('<div class="projects carousel-item "></div>');
-    var $newDiv4 = $('<div class="itens" id="new-itens-2"></div>');
-
+  }
+  for (var d = 1; d <= 2; d++) {
+    var div = $('.full-card-web-' + d);
+    window['$div' + d] = div;
+  }
+  for (var p = 1; p <= 4; p++) {
+    var newProjDiv;
+    var newDivIten;
+    if (p % 2 === 1) {
+      if (p === 1) {
+        newProjDiv = $('<div class="projects carousel-item active"></div>');
+        window['$newDiv' + p] = newProjDiv;
+      } else {
+        newProjDiv = $('<div class="projects carousel-item"></div>');
+        window['$newDiv' + p] = newProjDiv;
+      }
+    } else if (p % 2 === 0){
+      newDivIten = $('<div class="itens" id="new-itens-' + (p/2) + '"></div>');  
+      window['$newDiv' + p] = newDivIten;
+      console.log(newDivIten);
+  }}
     $div1.wrapAll($newDiv2)
     var $itens = $('#new-itens-1')
     $itens.wrapAll($newDiv1)
