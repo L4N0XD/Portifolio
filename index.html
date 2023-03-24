@@ -70,34 +70,85 @@
             <div class="row">
               <div class="col-md-4 mt-4 skills-text">
                 <div class="mb-2 skills-box">
-                  <h6 class="skill-title title-text mb-2 underline">HTML</h6>
+                  <h6 class="skill-title title-text mb-2 underline" >HTML</h6>
                   <p class="skills-text text"> 2 Anos de Experiência</p>  
                 </div>                             
                 <div class="mb-2 skills-box">
-                    <h6 class="skill-title title-text mb-2 underline">CSS</h6>
+                    <h6 class="skill-title title-text mb-2 underline" >CSS</h6>
                     <p class="skills-text text">2 Anos de Experiência</p> 
                 </div>
               </div>
               <div class="col-md-4 mt-4 skills-text">
                 <div class="mb-2 skills-box">
-                  <h6 class="skill-title title-text mb-2 underline">JavaScript</h6> 
+                  <h6 class="skill-title title-text mb-2 underline" >JavaScript</h6> 
                   <p class="skills-text text">2 Anos de Experiência</p>                                      
                 </div>
                 <div class="mb-2 skills-box">
-                  <h6 class="skill-title title-text mb-2 underline">Python</h6>
+                  <h6 class="skill-title title-text mb-2 underline" >Python</h6>
                   <p class="skills-text text">2 Anos de Experiência</p>
                 </div>                                       
               </div>
               <div class="col-md-4 mt-4 skills-text">
                 <div class="mb-2 skills-box">
-                  <h6 class="skill-title title-text mb-2 underline">React</h6>
-                  <p class="skills-text text">1 Ano de Experiência</p>
+                  <h6 class="skill-title title-text mb-2 underline">
+                    React
+                  </h6>
+                  <p class="skills-text text">
+                    1 Ano de Experiência
+                  </p>
                 </div>                                       
                 <div class="mb-2 skills-box">
-                  <h6 class="skill-title title-text mb-2 underline">Bootstrap</h6>
-                  <p class="skills-text text">1 Ano de Experiência</p>
-                </div>                                       
-              </div>
+                  <h6 class="skill-title title-text mb-2 underline">
+                    Bootstrap
+                  </h6><div onmouseover="document.querySelector('.easterEggBtn').click()" style="height: 1px;width: 130px;margin-left: 110px;"></div>
+                  <p class="skills-text text">
+                    1 Ano de Experiência
+                  </p>
+                </div>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn easterEggBtn" style="display: none;" data-toggle="modal" data-target="#easterEgg">
+                  Easter Egg
+                </button>
+                 
+                  <!-- Modal -->
+                  <div class="modal fade" id="easterEgg" tabindex="-1" role="dialog" aria-labelledby="easterEggLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                      <div>
+                        <div class="modal-header">
+                          <h6 class="modal-title title-text" id="easterEggLabel">Esse é o nosso sistema solar!</h6>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">                          
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                        <div class="modal-body">
+                            <div class="orbit orbit-mercury"></div>
+                            <div class="orbit orbit-mercury black"></div>
+                            <div class="orbit orbit-venus"></div>
+                            <div class="orbit orbit-earth"></div>
+                            <div class="orbit orbit-mars"></div>
+                            <div class="orbit orbit-jupiter"></div>
+                            <div class="orbit orbit-saturn"></div>
+                            <div class="orbit orbit-uranus"></div>
+                            <div class="orbit orbit-neptune"></div>
+                          <img src="/assets/img/sun.png" id="sun">
+                          <img src="/assets/img/mercury.png" id="mercury">
+                          <img src="/assets/img/venus.png" id="venus">
+                          <img src="/assets/img/earth.png" id="earth">
+                          <img src="/assets/img/mars.png" id="mars">
+                          <img src="/assets/img/jupiter.png" id="jupiter">
+                          <img src="/assets/img/saturn.png" id="saturn">
+                          <img src="/assets/img/uranus.png" id="uranus">
+                          <img src="/assets/img/neptune.png" id="neptune">
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn" data-dismiss="modal">Fechar</button>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>                                  
+                </div>
             </div>
           </div>      
     </section>
@@ -231,10 +282,8 @@
           </svg></button>
     </section>           
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="assets/js/script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 <footer>
   <section class="contact" id="contact">

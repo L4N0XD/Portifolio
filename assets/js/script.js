@@ -79,7 +79,6 @@ function cardDisposition(screen){
     } else if (p % 2 === 0){
       newDivIten = $('<div class="itens" id="new-itens-' + (p/2) + '"></div>');  
       window['$newDiv' + p] = newDivIten;
-      console.log(newDivIten);
   }}
     $div1.wrapAll($newDiv2)
     var $itens = $('#new-itens-1')
@@ -151,3 +150,4 @@ const backTop = document.querySelector(".back-to-top")
 		backTop.addEventListener("click", function() {
       topFunction();
 		});
+
