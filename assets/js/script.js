@@ -124,21 +124,25 @@ function titleEffect(){
   }  
 }
 //Adiciona efeito ao rolar a página à partir dos links da navbar
-function smoothEffect (){
-
+function smoothEffect() {
   navLinks.forEach(link => {
     link.addEventListener('click', function(event) {
-      event.preventDefault(); 
-      var section = document.querySelector(this.getAttribute('href')); 
-      var sectionTop = section.offsetTop; 
-      section.classList.add('active');
-      window.scrollTo({
-        top: sectionTop,
-        behavior: 'smooth' 
-      });  
-    });  
-  });    
-};
+      if (
+        this.getAttribute('href') !== "https://www.github.com/l4n0xd" &&
+        this.getAttribute('href') !== "https://www.linkedin.com/in/taylan-noronha"
+      ) {
+        var section = document.querySelector(this.getAttribute('href'));
+        var sectionTop = section.offsetTop;
+        section.classList.add('active');
+        window.scrollTo({
+          top: sectionTop,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+}
+
   
 if (window.innerWidth < 768 ) {
   cardDisposition("mobile");
